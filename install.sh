@@ -223,14 +223,6 @@ install_XrayR() {
     ln -s /usr/bin/XrayR /usr/bin/xrayr # 小写兼容
     chmod +x /usr/bin/xrayr
 
-    systemctl daemon-reload
-    XrayR restart
-    echo "正在关闭防火墙！"
-    echo
-    systemctl disable firewalld
-    systemctl stop firewalld
-    echo "XrayR服务已经完成重启，请愉快地享用！"
-    echo
 
     cd $cur_dir
     rm -f install.sh
